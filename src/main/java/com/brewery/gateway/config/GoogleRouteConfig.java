@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
 // @Configuration
 public class GoogleRouteConfig {
 
-   // @Bean
-    public RouteLocator googleRouteLocator(RouteLocatorBuilder routeLocatorBuilder){
+    // @Bean
+    public RouteLocator googleRouteLocator(RouteLocatorBuilder routeLocatorBuilder) {
         return routeLocatorBuilder.routes()
                 .route(r -> r.path("/googlesearch2")
                         .filters(f -> f.rewritePath("/googlesearch2(?<segment>/?.*)", "/${segment}"))
